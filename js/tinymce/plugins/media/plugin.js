@@ -288,7 +288,7 @@ tinymce.PluginManager.add('media', function(editor, url) {
 			});
 
 			if (data.type == "iframe") {
-				html += '<iframe src="' + data.source1 + '" width="' + data.width + '" height="' + data.height + '"></iframe>';
+				html += '<iframe src="' + data.source1 + '" width="' + data.width + '" height="' + data.height + '" scrolling="no"></iframe>';
 			} else if (data.source1mime == "application/x-shockwave-flash") {
 				html += '<object data="' + data.source1 + '" width="' + data.width + '" height="' + data.height + '" type="application/x-shockwave-flash">';
 
@@ -500,8 +500,8 @@ tinymce.PluginManager.add('media', function(editor, url) {
 					case "img":
 					case "iframe":
 						setAttributes(attrs, {
-							width: data.width,
-							height: data.height
+							/*width: data.width,
+							height: data.height*/
 						});
 						break;
 				}
